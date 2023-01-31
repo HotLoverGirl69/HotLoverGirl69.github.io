@@ -1,1 +1,113 @@
-Hello World!
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="polaroid">
+            <img src="img/thematrix.jpg">
+            <div class="title">
+                <h1>Matrix</h1>
+            </div>
+        </div>
+
+        <div class="polaroid">
+            <img src="img/titanic.jpg">
+            <div class="title">
+                <h1>Titanic</h1>
+            </div>
+        </div>
+
+        <div class="polaroid">
+            <img src="img/getout.jpg">
+            <div class="title">
+                <h1>Get Out</h1>
+            </div>
+        </div>
+
+        <div class="polaroid">
+            <img src="img/everythingeverywhereallatonce.jpg">
+            <div class="title">
+                <h1>Everything Everywhere All at Once and once and once and once and wonce</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function adjustFont() {
+            let h1 = document.querySelectorAll("h1");
+            let div = document.getElementsByClassName("title");
+
+            for (let i = 0; i < h1.length; i++) {
+                h1[i].style.fontSize = "6vw";
+
+                let paddingTop = parseInt(window.getComputedStyle(div[i]).paddingTop);
+                let paddingBottom = parseInt(window.getComputedStyle(div[i]).paddingBottom);
+                let divHeightWithoutPadding = div[i].offsetHeight - paddingTop - paddingBottom;
+
+                while (h1[i].offsetHeight > divHeightWithoutPadding) {
+                    h1[i].style.fontSize = (parseInt(window.getComputedStyle(h1[i]).fontSize) - 1) + "px";
+                }
+
+            }
+        }
+
+        window.onresize = adjustFont;
+        window.onload = function () {
+            setTimeout(function () {
+                adjustFont();
+            }, 0.5);
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+<!-- 
+
+<div>
+    <img src="img/titanic.jpg">
+    <h1>Titanic</h1>
+</div>
+
+
+<div>
+    <img src="img/americanpsyco.jpg">
+    <h1>American Psycho</h1>
+</div>
+
+<div>
+    <img src="img/blairwitchproject.jpg">
+    <h1>The Blair Witch Project</h1>
+</div>
+
+<div>
+    <img src="img/savingprivateryan.jpg">
+    <h1>Saving Private Ryan</h1>
+</div>
+
+
+
+<div>
+    <img src="img/scream.jpg">
+    <h1>Scream</h1>
+</div>
+
+<div>
+    <img src="img/thedarkknight.jpg">
+    <h1>The Dark Knight</h1>
+</div>
+
+<div>
+    <img src="img/trainingday.jpg">
+    <h1>Training Day</h1>
+</div> -->

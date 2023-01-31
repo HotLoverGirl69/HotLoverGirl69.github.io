@@ -1,0 +1,59 @@
+@font-face {
+    font-family: PermanentMarker;
+    src: url(fonts/PermanentMarker-Regular.ttf);
+}
+
+body {
+    background-color: beige;
+    margin: 0px;
+}
+
+.polaroid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    float: left;
+
+    margin: 0.5vw;
+
+    border-width: calc((5/108) * (100vw / 3)) calc((5/108) * (100vw / 3)) 0vw calc((5/108) * (100vw / 3));
+    border-style: solid;
+    border-color: white;
+
+    width: calc((98/108) * (100vw) / 3 - 1vw);
+
+    box-shadow: 1px 3px 5px black, -1px 0px 5px black;
+}
+
+img {
+    width: 100%;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    margin: auto;
+
+    background-color: white;
+
+    text-align: center;
+
+    font-family: 'PermanentMarker';
+
+    height: 5vw;
+    width: 100%;
+    padding: 1vw;
+    box-sizing: border-box;
+
+    /* height: calc((1/98*(98/108)*(100vw / 3))-0.5vw); */
+}
+
+.title h1 {
+    width: 100%;
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: keep-all;
+    hyphens: auto;
+}
